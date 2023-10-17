@@ -7,15 +7,17 @@ import Categories from "./Categories";
 
 const Products = () => {
     const dispatch = useDispatch();
-    const { products, productStatus } = useSelector(state => state.products);
+    const { products, productStatus } = useSelector((state) => state.products);
 
     useEffect(() => {
         dispatch(getProducts());
     }, [dispatch]);
 
+    // Limit the number of products to 8
+    const displayedProducts = products && products.products ? products.products.slice(0, 8) : [];
+
     return (
         <div>
-           
             <div className="font-extrabold text-5xl mx-10 mt-8">
                 Products
             </div>
@@ -23,16 +25,10 @@ const Products = () => {
             {productStatus === "loading" ? (
                 <Loading />
             ) : (
-                <div className="p-2 m-2">
-                    <div className="grid grid-cols-4 ">
-                    {products && products.products ? (
-                        products.products.map((product, i) => (
-                            <Product key={i} product={product} />
-                        ))
-                    ) : (
-                        <p>No products found.</p>
-                    )}
-                </div>
+                <div className="grid grid-cols-4 gap-4 p-4">
+                    {displayedProducts.map((product, i) => (
+                        <Product key={i} product={product} />
+                    ))}
                 </div>
             )}
         </div>
