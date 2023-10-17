@@ -16,8 +16,8 @@ const AboutUs = () => {
             <div className='flex justify-start text-gray-500'>
                 affect how you feel and your mood.
             </div>
-            <div class="grid grid-cols-3">
-                <div class="grid grid-cols-2 gap-20 place-content-start">
+            <div className="grid grid-cols-3">
+                <div className="grid grid-cols-2 gap-20 place-content-start">
                     <div>
                         <div className="text-6xl text-orange-600">1</div>
                         <div className="font-bold text-2xl">Mission</div>
@@ -47,7 +47,7 @@ const AboutUs = () => {
                     <div></div>
                 
                 </div>
-                <div class="grid grid-cols-2 gap-20 place-content-end">
+                <div className="grid grid-cols-2 gap-20 place-content-end">
                     <div>
                         <img src={about1}></img>
                     </div>

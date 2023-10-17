@@ -12,9 +12,10 @@ const Categories = () => {
         dispatch(getCategories())
     }, [dispatch])
     return (
-        <div>
-            <div className=" mx-10 mt-8">
-                Categories
+        <div className="">
+            <div className="grid grid-cols-10 mx-8 mt-8 p-2">
+                {categories?.map((category,i) => (
+                    <div className="text-center cursor-pointer hover:bg-gray-300" key={i}>{category}</div>))}
             </div>
         </div>
     )
