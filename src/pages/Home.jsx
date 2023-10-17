@@ -3,8 +3,8 @@ import HomeTitle from '../components/homeTitle/HomeTitle';
 import HomeSearch from '../components/homeSearch/HomeSearch';
 import AboutUs from '../components/aboutUs/AboutUs';
 import Products from '../components/products/Products';
-import Categories from '../components/products/Categories';
 import { useState } from 'react';
+import Testimonal from '../components/testimonals/Testimonal';
 
 const Home = () => {
     const [category, setCategory] = useState('')
@@ -14,7 +14,7 @@ const Home = () => {
             <HomeSearch />
             <AboutUs />
             <Products />
-            
+            <Testimonal />
         </div>
 
 
