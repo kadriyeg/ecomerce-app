@@ -5,6 +5,7 @@ import AboutUs from '../components/aboutUs/AboutUs';
 import Products from '../components/products/Products';
 import { useState } from 'react';
 import Testimonal from '../components/testimonals/Testimonal';
+import Contact from '../components/contact/Contact';
 
 const Home = () => {
     const [category, setCategory] = useState('')
@@ -15,6 +16,7 @@ const Home = () => {
             <AboutUs />
             <Products />
             <Testimonal />
+            <Contact/>
         </div>
 
 

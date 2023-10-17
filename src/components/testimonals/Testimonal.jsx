@@ -1,8 +1,11 @@
 import React from "react";
 import like from "../../assets/like.jpg";
 import { BiFontSize, BiSolidQuoteLeft } from "react-icons/bi";
+import ReactPaginate from "react-paginate";
 
 const Testimonal = ({ testimonal }) => {
+
+    
     return (
         <div className="bg-blue-950 h-[500px]">
         <div className="text-5xl font-extrabold text-white pt-10 pl-10">What do customers say...</div>
@@ -15,6 +18,7 @@ const Testimonal = ({ testimonal }) => {
           <div className="font-bold text-orange-500">Wade Warren</div>
             <div className="font-thin text-xs text-gray-300">Doctor</div>
           </div>
+
         </div>
 
         </div>
