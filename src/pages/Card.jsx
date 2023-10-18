@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getCartTotal } from "../redux/cardSlice";
 import { useNavigate } from "react-router-dom";
 import CartComp from "../components/card/CartComp";
+import DownloadButton from "../components/download/downloadButton";
 
 const Card = () => {
     const navigate = useNavigate();
@@ -29,7 +30,11 @@ const Card = () => {
                     <div className="flex items-center justify-end mr-10 font-bold">Total Amount:  <span>${totalAmount}</span></div>
                 </div> :
                 <div>Your card is empty</div>
+                
             }
+            <div className="  flex justify-end mr-10 bg-green-300 ">
+            <DownloadButton />
+            </div>
         </div>
     )
 
