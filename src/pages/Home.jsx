@@ -7,11 +7,12 @@ import Testimonal from '../components/testimonals/Testimonal';
 import Contact from '../components/contact/Contact';
 import Categories from '../components/products/Categories';
 import { useState } from 'react';
+import Footer from '../components/footer/Footer';
 
 
 const Home = () => {
     const [category, setCategory] = useState('');
-    
+
     return (
         <div>
             <HomeTitle />
@@ -21,6 +22,7 @@ const Home = () => {
             <Products category={category} />
             <Testimonal />
             <Contact/>
+            <Footer/>
         </div>
 
 

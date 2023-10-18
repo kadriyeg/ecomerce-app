@@ -38,7 +38,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="mx-10">
+        <div className="mx-10 mt-10">
             <div className="grid grid-cols-2">
                 <div className="grid grid-cols-2 gap-20 place-content-end">
                     <div>

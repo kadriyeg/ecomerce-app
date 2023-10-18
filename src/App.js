@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import PageContainer from "./containers/PageContainer";
 import Detail from "./pages/Detail";
 import Card from "./pages/Card";
+import Search from "./pages/Search";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/products/:id" element={<Detail />} />
         <Route path="/cart" element={<Card/>} />
+        <Route path="products/search" element={<Search />} />
       </Routes>
       </BrowserRouter>
       </PageContainer>

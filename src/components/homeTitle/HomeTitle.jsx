@@ -3,7 +3,7 @@ import  React from 'react'
 const HomeTitle = () => {
     return (
         <div>
-         <div className='flex justify-center  text-5xl font-bold m-5'>
+         <div className='flex justify-center mt-10 text-5xl font-bold m-5'>
             Amazing furniture for
         </div>
            <div className='flex justify-center  text-5xl font-bold mb-5'>
