@@ -17,11 +17,18 @@ const initialState = {
         return data;
     });
 
+    export const getCategoryProducts = createAsyncThunk ('getcategory', async(category) => {
+        const response = await fetch(`https://dummyjson.com/products/category/${category}`);
+        const data = await response.json();
+        return data;
+    });
+
     export const getDetailProduct = createAsyncThunk ('getProduct', async(id) => {
         const response = await fetch(`https://dummyjson.com/products/${id}`);
         const data = await response.json();
         return data;
     });
+
 const productSlice = createSlice({
     name: "products", 
     initialState,
@@ -47,6 +54,16 @@ const productSlice = createSlice({
             builder.addCase(getDetailProduct.rejected, (state, action) => {
                 state.productDetailStatus = STATUS.ERROR
             });
+            builder.addCase(getCategoryProducts.pending, (state, action) => {
+                state.productStatus = STATUS.LOADING
+            })
+            builder.addCase(getCategoryProducts.fulfilled, (state, action) => {
+                state.productStatus = STATUS.SUCCESS
+                state.products = action.payload
+            })
+            builder.addCase(getCategoryProducts.rejected, (state, action) => {
+                state.productStatus = STATUS.ERROR
+            })
         }
     }
 );
