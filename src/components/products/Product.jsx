@@ -1,11 +1,13 @@
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";   
+import { useNavigate } from "react-router-dom";
 
 const Product = ({ product }) => {
     
-    return (
-        
-        <div className="cursor-pointer relative w-200 p-2 m-10 hover:bg-orange-500 flex flex-col items-center justify-center">
+const navigate = useNavigate();
+
+    return (        
+        <div onClick={()=> {navigate(`products/${product?.id}`)}} className="cursor-pointer relative w-200 p-2 m-10 hover:bg-orange-500 flex flex-col items-center justify-center">
             
             <div className="relative z-10 w-150 h-150 overflow-hidden">
                 <img

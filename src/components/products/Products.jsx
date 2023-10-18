@@ -17,7 +17,6 @@ const Products = ({category}) => {
         dispatch(getProducts());
     }, [dispatch, category]);
 
-    // Limit the number of products to 8
     const displayedProducts = products && products.products ? products.products.slice(0, 8) : [];
 
     return (

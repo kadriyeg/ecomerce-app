@@ -23,7 +23,7 @@ const initialState = {
         return data;
     });
 
-    export const getDetailProduct = createAsyncThunk ('getProduct', async(id) => {
+    export const getDetailProduct = createAsyncThunk ('getproduct', async(id) => {
         const response = await fetch(`https://dummyjson.com/products/${id}`);
         const data = await response.json();
         return data;
